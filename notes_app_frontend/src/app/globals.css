@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
+/* Base theme variables default (Ocean Professional) */
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
-  --color-background: #FFFFFF;
+  --color-primary: #2563EB; /* blue-600 */
+  --color-secondary: #F59E0B; /* amber-500 */
+  --color-error: #EF4444; /* red-500 */
+  --color-background: #f9fafb; /* gray-50 */
+  --color-surface: #ffffff;
+  --color-text: #111827; /* gray-900 */
 }
 
+/* Reset */
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
+/* Layout base */
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: var(--color-background);
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+/* Focus visibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Utility enhancements */
+.resize-vertical {
+  resize: vertical;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+input,
+textarea {
+  transition: background-color 150ms ease, color 150ms ease,
+    border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
